@@ -1,5 +1,6 @@
 let calcButton = document.getElementById('calcButton');
 let buttonStyle = document.querySelector('.btn-primary')
+let formInput = document.getElementById(formCalculate);
 
 let buttonEvent = function (executeFn) {
   calcButton.addEventListener('click', executeFn);
@@ -33,9 +34,6 @@ let btnSpinnerIcon = function () {
   }, 5000)
 }
 buttonEvent(btnSpinnerIcon);
-
-
-let formInput = document.getElementById(formCalculate);
 
 let errorEvent = function () {
   let calcInput1 = document.getElementById("formCalculate").elements[0].value;
