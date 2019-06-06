@@ -39,7 +39,7 @@ calcButton.addEventListener('click' , function () {
 
 });
 
-/*
+
 calcButton.addEventListener('click', function () {
 
   let calcInput1 = document.getElementById("formCalculate").elements[0].value;
@@ -55,4 +55,3 @@ calcButton.addEventListener('click', function () {
   }, 5000);
 }
 })
-*/
