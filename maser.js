@@ -37,11 +37,12 @@ buttonEvent(btnSpinnerIcon);
 
 let formInput = document.getElementById(formCalculate);
 
+let errorEvent = function () {
   let calcInput1 = document.getElementById("formCalculate").elements[0].value;
   let calcInput2 = document.getElementById("formCalculate").elements[1].value;
   let sum1and2 = parseFloat(calcInput1) + parseFloat(calcInput2);
   setTimeout(function () {
     document.getElementById("calcBoard").innerHTML = 'here is your result: <br>   ' + sum1and2;
   }, 5000);
-});
+}
 buttonEvent(errorEvent);
