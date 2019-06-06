@@ -1,5 +1,6 @@
 let calcButton = document.getElementById('calcButton');
 let buttonStyle = document.querySelector('.btn-primary')
+let formInput = document.getElementById(formCalculate);
 
 let clicky = function () {
   console.log("Clicky!");
@@ -8,17 +9,15 @@ let clicky = function () {
 calcButton.addEventListener('click', clicky);
 
 let stylesToggelBtn = function () {
-
   buttonStyle.classList.add('btn-success');
   buttonStyle.classList.remove('btn-primary');
+
   setTimeout(function () {
     buttonStyle.classList.add('btn-primary');
     buttonStyle.classList.remove('btn-success');
-
   }, 5000);
 
 }
-
 calcButton.addEventListener('click', stylesToggelBtn)
 
 let btnSpinnerIcon = function () {
@@ -27,10 +26,8 @@ let btnSpinnerIcon = function () {
     calcButton.innerHTML = 'Calculate!';
   }, 5000)
 }
-
 calcButton.addEventListener('click', btnSpinnerIcon);
 
-let formInput = document.getElementById(formCalculate);
 
 calcButton.addEventListener('click' , function () {
   let calcInput1 = document.getElementById("formCalculate").elements[0].value;
