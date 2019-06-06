@@ -1,3 +1,3 @@
 let calcButton = document.getElementById('calcButton');
 
-console.log(calcButton);
+calcButton.addEventListener('click', function () { console.log("Clicky!");});
