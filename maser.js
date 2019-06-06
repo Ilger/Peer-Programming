@@ -39,13 +39,14 @@ calcButton.addEventListener('click' , function () {
 
 });
 
+/*
 calcButton.addEventListener('click', function () {
 
   let calcInput1 = document.getElementById("formCalculate").elements[0].value;
   let calcInput2 = document.getElementById("formCalculate").elements[1].value;
   let inputError = document.getElementById('inpusterror');
 
-  if ( isNaN(sum1and2)) {
+  if (isNaN(sum1and2)) {
   inputError.textContent = 'empty inputfield';
   inputError.style.color = 'red';
   inputError.style.display = 'block';
@@ -53,5 +54,7 @@ calcButton.addEventListener('click', function () {
     document.getElementById('inpusterror').style.display = 'none';
   }, 5000);
 }
+*/
+
 
 })
