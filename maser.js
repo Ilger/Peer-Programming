@@ -59,9 +59,9 @@ let calcEvent = function () {
   let sum1and2 = parseFloat(calcInput1) + parseFloat(calcInput2);
 
   let printResult = function () {
-    resultInput.innerHTML = '<p class="text-success">Your result =</><br>' + sum1and2 ;
+    resultInput.innerHTML = '<p class="text-success">Your result =</><p class="text-primary"> ' + sum1and2 + '</p>' ;
   }
-  
+
   eventTimer(printResult);
 }
 buttonEvent(calcEvent);
