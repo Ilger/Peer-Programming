@@ -1,11 +1,16 @@
 let calcButton = document.getElementById('calcButton');
 let buttonStyle = document.querySelector('.btn-primary')
 
+let buttonEvent = function (executeFn) {
+  calcButton.addEventListener('click', executeFn);
+}
+
+
 let clicky = function () {
   console.log("Clicky!");
 
 }
-calcButton.addEventListener('click', clicky);
+buttonEvent(clicky);
 
 let stylesToggelBtn = function () {
 
@@ -18,8 +23,8 @@ let stylesToggelBtn = function () {
   }, 5000);
 
 }
+buttonEvent(stylesToggelBtn);
 
-calcButton.addEventListener('click', stylesToggelBtn)
 
 let btnSpinnerIcon = function () {
   calcButton.innerHTML = '<i class="fas fa-spinner"></i> Calculating... ';
@@ -27,12 +32,11 @@ let btnSpinnerIcon = function () {
     calcButton.innerHTML = 'Calculate!';
   }, 5000)
 }
+buttonEvent(btnSpinnerIcon);
 
-calcButton.addEventListener('click', btnSpinnerIcon);
 
 let formInput = document.getElementById(formCalculate);
 
-calcButton.addEventListener('click' , function () {
   let calcInput1 = document.getElementById("formCalculate").elements[0].value;
   let calcInput2 = document.getElementById("formCalculate").elements[1].value;
   let sum1and2 = parseFloat(calcInput1) + parseFloat(calcInput2);
@@ -40,3 +44,4 @@ calcButton.addEventListener('click' , function () {
     document.getElementById("calcBoard").innerHTML = 'here is your result: <br>   ' + sum1and2;
   }, 5000);
 });
+buttonEvent(errorEvent);
