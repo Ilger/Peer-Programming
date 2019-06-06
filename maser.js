@@ -9,6 +9,10 @@ let formInput = document.getElementById(formCalculate);
 let buttonEvent = function (executeFn) {
   calcButton.addEventListener('click', executeFn);
 }
+let eventTimer = function (timerCode) {
+  setTimeout(timerCode, 5000);
+}
+
 
 
 //log clicky event
@@ -22,31 +26,36 @@ buttonEvent(clicky);
 let stylesToggelBtn = function () {
   buttonStyle.classList.add('btn-success');
   buttonStyle.classList.remove('btn-primary');
-  setTimeout(function () {
+  let removeStyling = function () {
     buttonStyle.classList.add('btn-primary');
     buttonStyle.classList.remove('btn-success');
-
-  }, 5000);
+  }
+  eventTimer(removeStyling);
 }
 buttonEvent(stylesToggelBtn);
 
-
-//add icon
+//add icon + text inside buton on click
 let btnSpinnerIcon = function () {
   calcButton.innerHTML = '<i class="fas fa-spinner"></i> Calculating... ';
-  setTimeout(function (){
+  let activteText = function () {
     calcButton.innerHTML = 'Calculate!';
-  }, 5000)
+  }
+  eventTimer(activateText);
 }
 buttonEvent(btnSpinnerIcon);
 
-//costum error when input is invalid
-let errorEvent = function () {
+
+
+//calculate input
+let calcEvent = function () {
   let calcInput1 = document.getElementById("formCalculate").elements[0].value;
   let calcInput2 = document.getElementById("formCalculate").elements[1].value;
+
   let sum1and2 = parseFloat(calcInput1) + parseFloat(calcInput2);
-  setTimeout(function () {
+
+  let printResult = function () {
     document.getElementById("calcBoard").innerHTML = 'here is your result: <br>   ' + sum1and2;
-  }, 5000);
+  }
+  eventTimer(printResult);
 }
-buttonEvent(errorEvent);
+buttonEvent(calcEvent);
