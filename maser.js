@@ -1,20 +1,25 @@
+
+
+
 let calcButton = document.getElementById('calcButton');
 let buttonStyle = document.querySelector('.btn-primary')
 let formInput = document.getElementById(formCalculate);
+
 
 let buttonEvent = function (executeFn) {
   calcButton.addEventListener('click', executeFn);
 }
 
 
+//log clicky event
 let clicky = function () {
   console.log("Clicky!");
-
 }
 buttonEvent(clicky);
 
-let stylesToggelBtn = function () {
 
+//style event
+let stylesToggelBtn = function () {
   buttonStyle.classList.add('btn-success');
   buttonStyle.classList.remove('btn-primary');
   setTimeout(function () {
@@ -22,11 +27,11 @@ let stylesToggelBtn = function () {
     buttonStyle.classList.remove('btn-success');
 
   }, 5000);
-
 }
 buttonEvent(stylesToggelBtn);
 
 
+//add icon
 let btnSpinnerIcon = function () {
   calcButton.innerHTML = '<i class="fas fa-spinner"></i> Calculating... ';
   setTimeout(function (){
@@ -35,6 +40,7 @@ let btnSpinnerIcon = function () {
 }
 buttonEvent(btnSpinnerIcon);
 
+//costum error when input is invalid
 let errorEvent = function () {
   let calcInput1 = document.getElementById("formCalculate").elements[0].value;
   let calcInput2 = document.getElementById("formCalculate").elements[1].value;
