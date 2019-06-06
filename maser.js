@@ -54,7 +54,5 @@ calcButton.addEventListener('click', function () {
     document.getElementById('inpusterror').style.display = 'none';
   }, 5000);
 }
-*/
-
-
 })
+*/
