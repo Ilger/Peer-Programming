@@ -45,12 +45,13 @@ calcButton.addEventListener('click', function () {
   let calcInput2 = document.getElementById("formCalculate").elements[1].value;
   let inputError = document.getElementById('inpusterror');
 
-  if (calcInput1 <= 0 || calcInput2 <= 0 || calcInput1 <= NaN || calcInput2 <= NaN) {
+  if ( isNaN(sum1and2)) {
   inputError.textContent = 'empty inputfield';
   inputError.style.color = 'red';
-  }
+  inputError.style.display = 'block';
   setTimeout(function () {
     document.getElementById('inpusterror').style.display = 'none';
   }, 5000);
+}
 
 })
