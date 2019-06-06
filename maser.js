@@ -1,3 +1,12 @@
 let calcButton = document.getElementById('calcButton');
+let buttonStyle = document.querySelector('.btn-primary')
 
-calcButton.addEventListener('click', function () { console.log("Clicky!");});
+let clicky = function () {
+  console.log("Clicky!");
+
+  buttonStyle.classList.add('btn-success');
+  buttonStyle.classList.remove('btn-primary');
+
+}
+
+calcButton.addEventListener('click', clicky);
