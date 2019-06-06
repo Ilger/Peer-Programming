@@ -32,6 +32,9 @@ calcButton.addEventListener('click', btnSpinnerIcon);
 
 let formInput = document.getElementById(formCalculate);
 
-formInput.addEventListener('submit' , event => {
-  event.preventDefault();
+calcButton.addEventListener('click' , function () {
+  var calcInputField = document.getElementById("formCalculate").elements[0].value;
+  setTimeout(function () {
+    document.getElementById("calcBoard").innerHTML = 'here is your result: ' + calcInputField;
+  }, 5000);
 });
