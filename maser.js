@@ -1,6 +1,7 @@
 let calcButton = document.getElementById('calcButton');
 let buttonStyle = document.querySelector('.btn-primary')
 let formInput = document.getElementById(formCalculate);
+let sum1and2;
 
 let clicky = function () {
   console.log("Clicky!");
@@ -32,7 +33,8 @@ calcButton.addEventListener('click', btnSpinnerIcon);
 calcButton.addEventListener('click' , function () {
   let calcInput1 = document.getElementById("formCalculate").elements[0].value;
   let calcInput2 = document.getElementById("formCalculate").elements[1].value;
-  sum1and2 = parseFloat(calcInput1) + parseFloat(calcInput2);
+  let sum1and2 = parseFloat(calcInput1) + parseFloat(calcInput2);
+  return sum1and2;
   setTimeout(function () {
     document.getElementById("calcBoard").innerHTML = 'here is your result: <br>   ' + sum1and2;
   }, 5000);
