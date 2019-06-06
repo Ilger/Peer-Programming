@@ -35,6 +35,6 @@ let formInput = document.getElementById(formCalculate);
 calcButton.addEventListener('click' , function () {
   var calcInputField = document.getElementById("formCalculate").elements[0].value;
   setTimeout(function () {
-    document.getElementById("calcBoard").innerHTML = 'here is your result: ' + calcInputField;
+    document.getElementById("calcBoard").innerHTML = 'here is your result: <br>   ' + calcInputField;
   }, 5000);
 });
