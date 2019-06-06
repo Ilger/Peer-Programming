@@ -25,15 +25,32 @@ let btnSpinnerIcon = function () {
   setTimeout(function (){
     calcButton.innerHTML = 'Calculate!';
   }, 5000)
+
 }
 calcButton.addEventListener('click', btnSpinnerIcon);
-
 
 calcButton.addEventListener('click' , function () {
   let calcInput1 = document.getElementById("formCalculate").elements[0].value;
   let calcInput2 = document.getElementById("formCalculate").elements[1].value;
-  let sum1and2 = parseFloat(calcInput1) + parseFloat(calcInput2);
+  sum1and2 = parseFloat(calcInput1) + parseFloat(calcInput2);
   setTimeout(function () {
     document.getElementById("calcBoard").innerHTML = 'here is your result: <br>   ' + sum1and2;
   }, 5000);
+
 });
+
+calcButton.addEventListener('click', function () {
+
+  let calcInput1 = document.getElementById("formCalculate").elements[0].value;
+  let calcInput2 = document.getElementById("formCalculate").elements[1].value;
+  let inputError = document.getElementById('inpusterror');
+
+  if (calcInput1 <= 0 || calcInput2 <= 0 || calcInput1 <= NaN || calcInput2 <= NaN) {
+  inputError.textContent = 'empty inputfield';
+  inputError.style.color = 'red';
+  }
+  setTimeout(function () {
+    document.getElementById('inpusterror').style.display = 'none';
+  }, 5000);
+
+})
