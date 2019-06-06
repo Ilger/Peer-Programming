@@ -28,4 +28,10 @@ let btnSpinnerIcon = function () {
   }, 5000)
 }
 
-calcButton.addEventListener('click', btnSpinnerIcon)
+calcButton.addEventListener('click', btnSpinnerIcon);
+
+let formInput = document.getElementById(formCalculate);
+
+formInput.addEventListener('submit' , event => {
+  event.preventDefault();
+});

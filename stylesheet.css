@@ -34,3 +34,15 @@
 .hide {
     display:none;
 }
+
+
+
+#formCalculate {
+margin-top: 20px;
+}
+
+#calcBoard {
+    border: solid 2px black;
+    border-radius: 2px;
+    padding-left: 10px;
+}
