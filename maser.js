@@ -20,3 +20,9 @@ let stylesToggelBtn = function () {
 }
 
 calcButton.addEventListener('click', stylesToggelBtn)
+
+let btnSpinnerIcon = function () {
+  calcButton.insertAdjacentHTML('beforebegin', '<i class="fas fa-spinner"></i>')
+}
+
+calcButton.addEventListener('click', btnSpinnerIcon)
