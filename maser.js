@@ -22,9 +22,9 @@ let stylesToggelBtn = function () {
 calcButton.addEventListener('click', stylesToggelBtn)
 
 let btnSpinnerIcon = function () {
-  calcButton.insertAdjacentHTML('afterbegin', '<i class="fas fa-spinner"></i> ')
+  calcButton.innerHTML = '<i class="fas fa-spinner"></i> Calculating... ';
   setTimeout(function (){
-    calcButton.innerHTML = 'Calculate';
+    calcButton.innerHTML = 'Calculate!';
   }, 5000)
 }
 
