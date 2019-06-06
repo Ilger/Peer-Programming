@@ -4,9 +4,19 @@ let buttonStyle = document.querySelector('.btn-primary')
 let clicky = function () {
   console.log("Clicky!");
 
+}
+calcButton.addEventListener('click', clicky);
+
+let stylesToggelBtn = function () {
+
   buttonStyle.classList.add('btn-success');
   buttonStyle.classList.remove('btn-primary');
+  setTimeout(function () {
+    buttonStyle.classList.add('btn-primary');
+    buttonStyle.classList.remove('btn-success');
+
+  }, 5000);
 
 }
 
-calcButton.addEventListener('click', clicky);
+calcButton.addEventListener('click', stylesToggelBtn)
