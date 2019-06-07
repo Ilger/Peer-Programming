@@ -10,6 +10,8 @@ let inputError = document.getElementById('inpusterror');
 let calcInput1Value = formOutput.elements['calcInputfield1'].value;
 let calcInput2Value = formOutput.elements['calcInputfield2'].value;
 
+//calculate input
+let sum1and2 = parseFloat(calcInput1Value) + parseFloat(calcInput2Value);
 
 
 let buttonEvent = function (executeFn) {
@@ -52,15 +54,13 @@ let btnSpinnerIcon = function () {
 }
 buttonEvent(btnSpinnerIcon);
 
-//calculate input
 //print result
-let printResult = function () {
-  let sum1and2 = parseFloat(calcInput1Value) + parseFloat(calcInput2Value);
-
-  resultInput.innerHTML = '<p class="text-success">Your result =</><pclass="text-primary"> ' + sum1and2 + '</p>' ;
+let resultEvent = function () {
+  let printResult = function () {
+  resultInput.innerHTML = '<p class="text-success">Your result =</p><pclass="text-primary"> ' + sum1and2 + '</p>' ;
+  }
   eventTimer(printResult);
 }
-buttonEvent(printResult);
 
 
 // 
@@ -77,3 +77,5 @@ buttonEvent(printResult);
 //   eventTimer(removeErrorStyle);
 // }
 // buttonEvent(costumError);
+
+
