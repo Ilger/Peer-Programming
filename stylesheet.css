@@ -41,7 +41,9 @@
 margin-top: 20px;
 }
 
-#calcBoard {
+#resultInputField {
+    margin-top: 10px;
+    min-height: 60px;
     border: solid 2px black;
     border-radius: 2px;
     padding-left: 10px;
