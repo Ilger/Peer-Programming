@@ -61,21 +61,20 @@ let resultEvent = function () {
   }
   eventTimer(printResult);
 }
+buttonEvent(resultEvent);
 
 
-// 
-//
-// //costum error event
-// let costumError = function() {
-//   if (isNaN(sum1and2)) {
-//   inputError.textContent = 'empty inputfield';
-//   inputError.style.color = 'red';
-//   inputError.style.display = 'block';
-//   let removeErrorStyle = (function () {
-//     document.getElementById('inpusterror').style.display = 'none';
-//   }
-//   eventTimer(removeErrorStyle);
-// }
-// buttonEvent(costumError);
 
 
+//costum error event
+let costumError = function() {
+  if (isNaN(sum1and2)) {
+  inputError.textContent = 'empty inputfield';
+  inputError.style.color = 'red';
+  inputError.style.display = 'block';
+  let removeErrorStyle = (function () {
+    document.getElementById('inpusterror').style.display = 'none';
+  }
+  eventTimer(removeErrorStyle);
+}
+buttonEvent(costumError);
