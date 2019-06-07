@@ -5,6 +5,11 @@ let calcButton = document.getElementById('calcButton');
 let buttonStyle = document.querySelector('.btn-primary')
 let formOutput = document.getElementById('formCalculate');
 let resultInput = document.getElementById('resultInputField');
+let inputError = document.getElementById('inpusterror');
+
+let calcInput1Value = formOutput.elements['calcInputfield1'].value;
+let calcInput2Value = formOutput.elements['calcInputfield2'].value;
+
 
 
 let buttonEvent = function (executeFn) {
@@ -48,33 +53,27 @@ let btnSpinnerIcon = function () {
 buttonEvent(btnSpinnerIcon);
 
 //calculate input
-let calcEvent = function () {
-  let calcInput1 = formOutput.elements[0].value;
-  let calcInput2 = formOutput.elements[1].value;
+//print result
+let printResult = function () {
+  let sum1and2 = parseFloat(calcInput1Value) + parseFloat(calcInput2Value);
 
-  let sum1and2 = parseFloat(calcInput1) + parseFloat(calcInput2);
-
-  let printResult = function () {
-    resultInput.innerHTML = '<p class="text-success">Your result =</><p class="text-primary"> ' + sum1and2 + '</p>' ;
-  }
-
+  resultInput.innerHTML = '<p class="text-success">Your result =</><pclass="text-primary"> ' + sum1and2 + '</p>' ;
   eventTimer(printResult);
 }
-buttonEvent(calcEvent);
+buttonEvent(printResult);
 
 
-calcButton.addEventListener('click', function () {
-
-  let calcInput1 = document.getElementById("formCalculate").elements[0].value;
-  let calcInput2 = document.getElementById("formCalculate").elements[1].value;
-  let inputError = document.getElementById('inpusterror');
-
-  if (isNaN(sum1and2)) {
-  inputError.textContent = 'empty inputfield';
-  inputError.style.color = 'red';
-  inputError.style.display = 'block';
-  setTimeout(function () {
-    document.getElementById('inpusterror').style.display = 'none';
-  }, 5000);
-}
-})
+// 
+//
+// //costum error event
+// let costumError = function() {
+//   if (isNaN(sum1and2)) {
+//   inputError.textContent = 'empty inputfield';
+//   inputError.style.color = 'red';
+//   inputError.style.display = 'block';
+//   let removeErrorStyle = (function () {
+//     document.getElementById('inpusterror').style.display = 'none';
+//   }
+//   eventTimer(removeErrorStyle);
+// }
+// buttonEvent(costumError);
