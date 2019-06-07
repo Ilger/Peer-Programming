@@ -3,6 +3,7 @@
 
 let calcButton = document.getElementById('calcButton');
 let buttonStyle = document.querySelector('.btn-primary')
+<<<<<<< HEAD
 let formOutput = document.getElementById('formCalculate');
 let resultInput = document.getElementById('resultInputField');
 
@@ -14,6 +15,10 @@ let eventTimer = function (timerCode) {
   setTimeout(timerCode, 5000);
 }
 
+=======
+let formInput = document.getElementById(formCalculate);
+let sum1and2;
+>>>>>>> refs/stash
 
 //log clicky event
 let clicky = function () {
@@ -49,6 +54,17 @@ let btnSpinnerIcon = function () {
 buttonEvent(btnSpinnerIcon);
 
 
+<<<<<<< HEAD
+=======
+calcButton.addEventListener('click' , function () {
+  let calcInput1 = document.getElementById("formCalculate").elements[0].value;
+  let calcInput2 = document.getElementById("formCalculate").elements[1].value;
+  let sum1and2 = parseFloat(calcInput1) + parseFloat(calcInput2);
+  return sum1and2;
+  setTimeout(function () {
+    document.getElementById("calcBoard").innerHTML = 'here is your result: <br>   ' + sum1and2;
+  }, 5000);
+>>>>>>> refs/stash
 
 
 //calculate input
