@@ -57,7 +57,7 @@ buttonEvent(btnSpinnerIcon);
 //print result
 let resultEvent = function () {
   let printResult = function () {
-  resultInput.innerHTML = '<p class="text-success">Your result =</p><pclass="text-primary"> ' + sum1and2 + '</p>' ;
+  resultInput.innerHTML = '<p class="text-success">Your result =</p><span class="text-primary"> ' + sum1and2 + '</span>' ;
   }
   eventTimer(printResult);
 }
@@ -72,7 +72,8 @@ let costumError = function() {
   inputError.textContent = 'empty inputfield';
   inputError.style.color = 'red';
   inputError.style.display = 'block';
-  let removeErrorStyle = (function () {
+  }
+  let removeErrorStyle = function () {
     document.getElementById('inpusterror').style.display = 'none';
   }
   eventTimer(removeErrorStyle);
