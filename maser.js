@@ -9,10 +9,39 @@ let inputError = document.getElementById('inpusterror');
 
 let calcInput1Value = formOutput.elements['calcInputfield1'].value;
 let calcInput2Value = formOutput.elements['calcInputfield2'].value;
+let chosenOperator = formOutput.elements['selectOperator'].value;
 
-//calculate input
-let sum1and2 = parseFloat(calcInput1Value) + parseFloat(calcInput2Value);
 
+function VarOperator(op) { //you object containing your operator
+    this.operation = op;
+
+    this.evaluate = function evaluate(param1, param2) {
+        switch(this.operation) {
+            case "+":
+                return param1 + param2;
+            case "-":
+                return param1 - param2;
+            case "*":
+                return param1 * param2;
+            case "/":
+                return param1 / param2;
+            // case "<":
+            //     return param1 < param2;
+            // case ">":
+            //     return param1 > param2;
+            // case "=":
+            //     return param1 == param2
+            case '%':
+                return param1 % param2
+        }
+    }
+}
+
+
+var vo = new VarOperator(chosenOperator); //initial operation: addition
+let sum1and2 = vo.evaluate(parseFloat(calcInput1Value),parseFloat(calcInput2Value));
+
+console.log(chosenOperator)
 
 let buttonEvent = function (executeFn) {
   calcButton.addEventListener('click', executeFn);
