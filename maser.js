@@ -25,12 +25,6 @@ function VarOperator(op) { //you object containing your operator
                 return param1 * param2;
             case "/":
                 return param1 / param2;
-            // case "<":
-            //     return param1 < param2;
-            // case ">":
-            //     return param1 > param2;
-            // case "=":
-            //     return param1 == param2
             case '%':
                 return param1 % param2
         }
