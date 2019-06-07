@@ -15,7 +15,6 @@ let eventTimer = function (timerCode) {
 }
 
 
-
 //log clicky event
 let clicky = function () {
   console.log("Clicky!");
@@ -48,6 +47,7 @@ let btnSpinnerIcon = function () {
   eventTimer(endText);
 }
 buttonEvent(btnSpinnerIcon);
+
 
 
 
