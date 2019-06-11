@@ -80,7 +80,9 @@ buttonEvent(btnSpinnerIcon);
 //print result
 let resultEvent = function () {
   let printResult = function () {
-  resultInput.innerHTML = '<p class="text-success">Your result =</p><span class="text-primary"> ' + sum1and2 + '</span>' ;
+  resultInput.innerHTML = '<p class="text-success">Your result:</p><span class="text-primary"> ' + calcInput1Value + ' ' +chosenOperator + ' ' + calcInput2Value + ' = ' + sum1and2 + '</span>' ;
+  calcInput1Value = "";
+  calcInput2Value = "";
   }
   eventTimer(printResult);
 }
