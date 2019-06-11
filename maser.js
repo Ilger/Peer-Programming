@@ -7,6 +7,14 @@ let formOutput = document.getElementById('formCalculate');
 let resultInput = document.getElementById('resultInputField');
 let inputError = document.getElementById('inpusterror');
 
+let errorStyle = function(){
+  inputError.style.color = 'red';
+  inputError.style.display = 'block';
+}
+let removeError = function () {
+  inputError.style.display = 'none';
+}
+
 let calcInput1Value = formOutput.elements['calcInputfield1'].value;
 let calcInput2Value = formOutput.elements['calcInputfield2'].value;
 let chosenOperator = formOutput.elements['selectOperator'].value;
@@ -94,13 +102,9 @@ buttonEvent(resultEvent);
 //costum error event
 let costumError = function() {
   if (isNaN(sum1and2)) {
-  inputError.textContent = 'empty inputfield';
-  inputError.style.color = 'red';
-  inputError.style.display = 'block';
+  inputError.textContent = 'Empty inputfield';
+  errorStyle();
   }
-  let removeErrorStyle = function () {
-    document.getElementById('inpusterror').style.display = 'none';
-  }
-  eventTimer(removeErrorStyle);
+  eventTimer(removeError);
 }
 buttonEvent(costumError);
