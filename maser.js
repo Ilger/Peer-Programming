@@ -40,7 +40,7 @@ function VarOperator(op) { //you object containing your operator
 }
 
 
-var vo = new VarOperator(chosenOperator); //initial operation: addition
+let vo = new VarOperator(chosenOperator); //initial operation: addition
 let sum1and2 = vo.evaluate(parseFloat(calcInput1Value),parseFloat(calcInput2Value));
 
 console.log(chosenOperator)
