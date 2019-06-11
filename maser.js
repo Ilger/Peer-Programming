@@ -108,3 +108,12 @@ let costumError = function() {
   eventTimer(removeError);
 }
 buttonEvent(costumError);
+
+let divideZero = function () {
+  if (calcInput2Value == 0 && chosenOperator == '/') {
+    inputError.textContent = 'Divide by 0 is illegal';
+    errorStyle();
+  }
+  eventTimer(removeError);
+}
+buttonEvent(divideZero);
